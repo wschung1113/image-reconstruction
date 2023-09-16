@@ -91,7 +91,7 @@ def imshow(img):
     plt.imshow(np.transpose(npimg, (1, 2, 0)))
     plt.show()
 
-imshow(torchvision.utils.make_grid(X))
+imshow(torchvision.utils.make_grid(torch.cat((X, ans), dim=0)))
 imshow(torchvision.utils.make_grid(ans))
 
 
