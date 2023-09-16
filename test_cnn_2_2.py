@@ -33,25 +33,23 @@ def make_full_img_ls(img_ls, seg_ls):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="A script that takes command-line arguments.")
 
-    parser.add_argument("arg1", type=int, help="Batch size. Preferrably 1.")
-    parser.add_argument("arg2", type=str, help="Model weight path to use.")
-    parser.add_argument("arg3", type=int, help="Into how many slices in row to cut original image.")
-    parser.add_argument("arg4", type=int, help="Into how many slices in col to cut original image.")
-    parser.add_argument("arg5", type=str, help="Whether to augment test data or not.")
+    parser.add_argument("arg1", type=str, help="Model weight path to use.")
+    parser.add_argument("arg2", type=int, help="Into how many slices in row to cut original image.")
+    parser.add_argument("arg3", type=int, help="Into how many slices in col to cut original image.")
+    parser.add_argument("arg4", type=str, help="Whether to augment test data or not.")
 
     args = parser.parse_args()
 
-    batch_size = args.arg1
-    model_path = args.arg2
-    M = args.arg3
-    N = args.arg4
-    is_augment = True if args.arg5 == "True" else False
+    model_path = args.arg1
+    M = args.arg2
+    N = args.arg3
+    is_augment = True if args.arg4 == "True" else False
 
     transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.5,), (0.5,))])
 
     # Load the MNIST dataset
     testset = torchvision.datasets.MNIST(root='./data', train=False, transform=transform, download=True)
-    testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size, shuffle=True)
+    testloader = torch.utils.data.DataLoader(testset, batch_size=1, shuffle=True)
 
     # fetch pre-trained model
     model = Net()
