@@ -1,8 +1,12 @@
+# Reconstructing image from augmented segments
+## [2x2]
 MNIST 데이터를 활용하여 해당 과제를 시작했습니다.
 
-[2x2]
+## [3x3]
 
-처음에는 각 segment의 edge들 간의 distance가 가장 작은 augmentation을 답안으로 제시하였으나 픽셀 특성상 MNIST의 검은 부분 (pixel=0)을 이어붙인 이미지가 정답으로 제시되어 다른 방법 물색
+처음에는 각 segment의 edge들 간의 distance가 가장 작은 augmentation을 답안으로 제시하였으나 픽셀 특성상 MNIST의 흰색 숫자 부분이 아닌 검은 바탕 부분 (pixel=0)을 이어붙인 이미지가 정답으로 제시되어 다른 방법 물색했습니다.
+
+
 
 
 
