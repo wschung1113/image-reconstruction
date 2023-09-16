@@ -30,10 +30,10 @@ Pipfile.lock
 scribble.py
 
 # Ignore all .py files in a directory
-obsolete/*.py
+# obsolete/*.py
 
 # Ignore some directories
-
+obsolete/
 
 
 
