@@ -57,6 +57,9 @@ batch_size = 1
 model_path = "model/cnn_model.pth"
 M = 2
 N = 2
+real_data, _ = next(iter(data_loader))
+
+
 is_augment = True
 transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.5,), (0.5,))])
 
@@ -86,7 +89,7 @@ Image.fromarray(np.array(X[0][0])*0.5+0.5).show()
 inputs, labels = next(iter(testloader))
 
 def imshow(img):
-    img = img / 0.5 + 0.5     # unnormalize
+    img = img * 0.5 + 0.5     # unnormalize
     npimg = img.numpy()
     plt.imshow(np.transpose(npimg, (1, 2, 0)))
     plt.show()
@@ -94,6 +97,7 @@ def imshow(img):
 imshow(torchvision.utils.make_grid(torch.cat((X, ans), dim=0)))
 imshow(torchvision.utils.make_grid(ans))
 
+imshow(torchvision.utils.make_grid(z[:16]))
 
 
 

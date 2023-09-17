@@ -1,7 +1,5 @@
 import numpy as np
 import torch
-import random
-import matplotlib.pyplot as plt
 
 
 def make_full_img_arr(img_ls, M, N):
