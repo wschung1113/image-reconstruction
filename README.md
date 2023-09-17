@@ -32,9 +32,9 @@ MNIST 데이터를 활용하여 해당 과제를 시작했습니다.
 
   - 좌측: 원본 이미지
   - 우측: 좌측 원본 이미지의 원본 추론 결과
-  ![Image Alt Text](results/cnn_2_2_3_augmented.png)
+  ![Image Alt Text](results/cnn_2_2_3.png)
   - CLI 실행문과 원본 이미지의 MNIST label print
-  ![Image Alt Text](results/cnn_2_2_3_augmented_label.png)
+  ![Image Alt Text](results/cnn_2_2_3_label.png)
 
   아래 파일들은 사실 실행하지 않으셔도 됩니다.
 
