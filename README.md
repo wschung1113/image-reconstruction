@@ -21,8 +21,21 @@ MNIST 데이터를 활용하여 해당 과제를 시작했습니다.
     - CLI 사용 방법: python3 test_cnn_2_2.py [pre-trained weights path] [M] [N] [원본 이미지를 augment 할지 말지]
     <pre>
     ```bash
-    $ python3 test_cnn_2_2.py "model/cnn_model_1.pth" 2 2 True
+    $ python3 test_cnn_2_2.py "model/cnn_model_1" 2 2 True
     ```
+  ##### 실행 결과
+  - 좌측: 원본 이미지를 4개의 segment로 쪼개고 각 segment를 임의로 augment하여 임의의 순서로 segment들을 이어붙인 이미지
+  - 우측: 좌측 augmented 이미지의 원본 추론 결과
+  ![Image Alt Text](cnn_2_2_1_augmented.png)
+  - CLI 실행문과 원본 이미지의 MNIST label print
+  ![Image Alt Text](cnn_2_2_1_augmented_label.png)
+
+  - 좌측: 원본 이미지
+  - 우측: 좌측 원본 이미지의 원본 추론 결과
+  ![Image Alt Text](cnn_2_2_3_augmented.png)
+  - CLI 실행문과 원본 이미지의 MNIST label print
+  ![Image Alt Text](cnn_2_2_3_augmented_label.png)
+
   아래 파일들은 사실 실행하지 않으셔도 됩니다.
 
   - cnn_model.py: CNN 이진 분류기 모델 클래스가 있습니다.
@@ -30,7 +43,7 @@ MNIST 데이터를 활용하여 해당 과제를 시작했습니다.
     - CLI 사용 방법: python3 train_cnn_2_2_mnist.py [.pth 파일명] [M] [N]
     <pre>
     ```bash
-    $ python3 train_cnn_2_2_mnist.py "model/cnn_model_1.pth" 2 2
+    $ python3 train_cnn_2_2_mnist.py "model/cnn_model_1" 2 2
     ```
     </pre>
   
