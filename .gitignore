@@ -34,6 +34,5 @@ scribble.py
 
 # Ignore some directories
 obsolete/
-results/
 
 
