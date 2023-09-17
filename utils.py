@@ -1,5 +1,7 @@
 import numpy as np
 import torch
+import random
+import matplotlib.pyplot as plt
 
 
 def make_full_img_arr(img_ls, M, N):
@@ -86,7 +88,7 @@ def append_augmented_data(batch_data, M, N):
 
 def imshow(img):
     # img = img / 0.5 + 0.5     # unnormalize
-    img = img * 0.5 + 0.5     # unnormalize
+    # img = img * 0.5 + 0.5     # unnormalize
     npimg = img.numpy()
     plt.imshow(np.transpose(npimg, (1, 2, 0)))
     plt.show()
